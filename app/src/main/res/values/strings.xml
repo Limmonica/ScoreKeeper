@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ScoreKeeper</string>
+    <string name="team_A_name">Team A</string>
+    <string name="team_B_name">Team B</string>
+    <string name="initial_Score">0</string>
+    <string name="three_points">+3 Points</string>
+    <string name="two_points">+2 Points</string>
+    <string name="one_point">Free Throw</string>
+    <string name="reset_score">Reset</string>
+    <string name="img_description">Basketball Score Keeper</string>
+</resources>

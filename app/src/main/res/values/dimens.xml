@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_padding_team_name">16dp</dimen>
+    <dimen name="margin_bottom_score">24dp</dimen>
+    <dimen name="text_size_team_name">24sp</dimen>
+    <dimen name="text_size_score">56sp</dimen>
+    <dimen name="width_line">2dp</dimen>
+</resources>
