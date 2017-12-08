@@ -42,7 +42,11 @@
                 <TextView
                     android:id="@+id/team_a_score"
                     style="@style/TextTeamScore"
-                    android:text="@string/initial_Score" />
+                    android:layout_marginLeft="@dimen/margin_padding_16"
+                    android:layout_marginStart="@dimen/margin_padding_16"
+                    android:layout_marginRight="@dimen/width_line"
+                    android:layout_marginEnd="@dimen/width_line"
+                    android:text="@string/initial_Score"/>
 
                 <!-- Add 3 points for the Team A -->
                 <Button
@@ -97,9 +101,13 @@
                     style="@style/TextTeamName"
                     android:text="@string/team_B_name" />
 
-                <!-- Team B Score -->
+                <!-- Team B Score View -->
                 <TextView
                     android:id="@+id/team_b_score"
+                    android:layout_marginEnd="@dimen/margin_padding_16"
+                    android:layout_marginRight="@dimen/margin_padding_16"
+                    android:layout_marginStart="@dimen/width_line"
+                    android:layout_marginLeft="@dimen/width_line"
                     style="@style/TextTeamScore"
                     android:text="@string/initial_Score" />
 
@@ -132,7 +140,7 @@
                         style="@style/ButtonFoulsStyle"
                         android:onClick="addFoulsForTeamB" />
 
-                    <!-- Text view Fouls for the Team A -->
+                    <!-- Text view Fouls for the Team B -->
                     <TextView
                         android:id="@+id/fouls_score_team_b"
                         style="@style/TextTeamFouls" />

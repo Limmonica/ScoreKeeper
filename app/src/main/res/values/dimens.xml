@@ -3,10 +3,10 @@
     <dimen name="margin_padding_16">16dp</dimen>
     <dimen name="margin_24">24dp</dimen>
     <dimen name="margin_8">8dp</dimen>
-    <dimen name="text_size_team_name">24sp</dimen>
-    <dimen name="text_size_score">56sp</dimen>
     <dimen name="width_line">2dp</dimen>
     <dimen name="empty">0dp</dimen>
+    <dimen name="text_size_team_name">24sp</dimen>
+    <dimen name="text_size_score">56sp</dimen>
     <dimen name="text_size_points">18sp</dimen>
     <dimen name="text_size_fouls">12sp</dimen>
     <dimen name="text_size_fouls_score">30sp</dimen>
