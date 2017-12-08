@@ -12,14 +12,22 @@ public class MainActivity extends AppCompatActivity {
     static final String STATE_SCORE_B = "scoreTeamB";
     static final String STATE_FOULS_A = "foulsTeamA";
     static final String STATE_FOULS_B = "foulsTeamB";
-    //Tracks the score for Team A
+    //Tracks the points score for Team A
     int scoreTeamA = 0;
-    //Tracks the score for Team B
+    //Tracks the points score for Team B
     int scoreTeamB = 0;
-    // Tracks the fouls for Team A
+    // Tracks the fouls score for Team A
     int foulsTeamA = 0;
-    // Tracks the fours for Team B
+    // Tracks the fouls score for Team B
     int foulsTeamB = 0;
+    // Tracks the points score view for Team A
+    TextView teamAScoreView;
+    // Tracks the points score view for Team B
+    TextView teamBScoreView;
+    // Tracks the fouls score view for Team A
+    TextView teamAFoulsView;
+    // Tracks the fouls score view for Team B
+    TextView teamBFoulsView;
 
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
@@ -49,30 +57,34 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        // Initializes the points score view for Team A
+        teamAScoreView = findViewById(R.id.team_a_score);
+        // Initializes the points score view for Team B
+        teamBScoreView = findViewById(R.id.team_b_score);
+        // Initializes the fouls score view for Team A
+        teamAFoulsView = findViewById(R.id.fouls_score_team_a);
+        // Initializes the fouls score view for Team B
+        teamBFoulsView = findViewById(R.id.fouls_score_team_b);
     }
 
     // Displays the given score for Team A.
     public void displayForTeamA(int score) {
-        TextView scoreView = findViewById(R.id.team_a_score);
-        scoreView.setText(String.valueOf(score));
+        teamAScoreView.setText(String.valueOf(score));
     }
 
     // Displays the given score for Team B.
     public void displayForTeamB(int score) {
-        TextView scoreView = findViewById(R.id.team_b_score);
-        scoreView.setText(String.valueOf(score));
+        teamBScoreView.setText(String.valueOf(score));
     }
 
     // Displays the given fouls for Team A.
     public void displayFoulsTeamA(int fouls) {
-        TextView foulsView = findViewById(R.id.fouls_score_team_a);
-        foulsView.setText(String.valueOf(fouls));
+        teamAFoulsView.setText(String.valueOf(fouls));
     }
 
     // Displays the given fouls for Team B.
     public void displayFoulsTeamB(int fouls) {
-        TextView foulsView = findViewById(R.id.fouls_score_team_b);
-        foulsView.setText(String.valueOf(fouls));
+        teamBFoulsView.setText(String.valueOf(fouls));
     }
 
     // This method is called when the +3 Points/TeamA button is clicked.
