@@ -19,17 +19,18 @@
             android:scaleType="centerCrop"
             android:src="@drawable/basketball" />
 
+        <!-- TEAMS SCORES -->
         <LinearLayout
             android:id="@+id/teams_scores"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
+            <!-- TEAM A SCORES: POINTS AND FOULS -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:alpha="0.9"
                 android:orientation="vertical">
 
                 <!-- Team A Name -->
@@ -37,7 +38,7 @@
                     style="@style/TextTeamName"
                     android:text="@string/team_A_name" />
 
-                <!-- Team A Score -->
+                <!-- Team A Score View -->
                 <TextView
                     android:id="@+id/team_a_score"
                     style="@style/TextTeamScore"
@@ -60,16 +61,35 @@
                     style="@style/ButtonStyle"
                     android:onClick="addOneForTeamA"
                     android:text="@string/one_point" />
+
+                <!-- TEAM A FOULS SCORE -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <!-- Add 1 foul for the Team A -->
+                    <Button
+                        style="@style/ButtonFoulsStyle"
+                        android:onClick="addFoulsForTeamA" />
+
+                    <!-- Text view Fouls for the Team A -->
+                    <TextView
+                        android:id="@+id/fouls_score_team_a"
+                        style="@style/TextTeamFouls" />
+
+                </LinearLayout>
+
             </LinearLayout>
 
             <!-- Middle line -->
             <View style="@style/LineStyle" />
 
+            <!-- TEAM B SCORE -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:alpha="0.9"
                 android:orientation="vertical">
 
                 <!-- Team B Name -->
@@ -100,13 +120,34 @@
                     style="@style/ButtonStyle"
                     android:onClick="addOneForTeamB"
                     android:text="@string/one_point" />
+
+                <!-- TEAM B FOULS SCORE -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <!-- Add 1 foul for the Team B -->
+                    <Button
+                        style="@style/ButtonFoulsStyle"
+                        android:onClick="addFoulsForTeamB" />
+
+                    <!-- Text view Fouls for the Team A -->
+                    <TextView
+                        android:id="@+id/fouls_score_team_b"
+                        style="@style/TextTeamFouls" />
+
+                </LinearLayout>
+
             </LinearLayout>
+
         </LinearLayout>
 
         <!-- Reset Button -->
         <Button
             style="@style/ButtonStyle"
             android:layout_below="@+id/teams_scores"
+            android:layout_marginTop="@dimen/margin_8"
             android:onClick="resetScore"
             android:text="@string/reset_score" />
 

@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">#673ab7</item>
-        <item name="colorPrimaryDark">#673ab7</item>
-        <item name="colorAccent">#673ab7</item>
+        <item name="colorPrimaryDark">#3f51b5</item>
+        <item name="colorAccent">#ff9800</item>
         <item name="android:textColor">#ffffff</item>
         <item name="colorButtonNormal">#673ab7</item>
     </style>
@@ -12,10 +12,10 @@
     <style name="TextTeamName">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginBottom">@dimen/margin_padding_team_name</item>
+        <item name="android:layout_marginBottom">@dimen/margin_padding_16</item>
         <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/roboto_bold</item>
         <item name="android:gravity">center</item>
-        <item name="android:padding">@dimen/margin_padding_team_name</item>
+        <item name="android:padding">@dimen/margin_padding_16</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:textSize">@dimen/text_size_team_name</item>
     </style>
@@ -24,8 +24,8 @@
     <style name="TextTeamScore">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginBottom">@dimen/margin_bottom_score</item>
-        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:layout_marginBottom">@dimen/margin_24</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
         <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/roboto</item>
         <item name="android:gravity">center</item>
         <item name="android:textSize">@dimen/text_size_score</item>
@@ -33,23 +33,50 @@
         <item name="android:layout_marginRight">@dimen/width_line</item>
     </style>
 
+    <!-- Style of the TextViews displaying the Team Fouls -->
+    <style name="TextTeamFouls">
+        <item name="android:layout_width">@dimen/empty</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">@dimen/margin_8</item>
+        <item name="android:paddingBottom">@dimen/margin_8</item>
+        <item name="android:layout_marginRight">@dimen/margin_24</item>
+        <item name="android:textSize">@dimen/text_size_fouls_score</item>
+        <item name="android:text">@string/initial_Score</item>
+    </style>
+
     <!-- Style of the Buttons displaying the Points and Reset -->
     <style name="ButtonStyle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginLeft">24dp</item>
-        <item name="android:layout_marginRight">24dp</item>
-        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginLeft">@dimen/margin_24</item>
+        <item name="android:layout_marginRight">@dimen/margin_24</item>
+        <item name="android:layout_marginBottom">@dimen/margin_8</item>
+        <item name="android:textSize">@dimen/text_size_points</item>
         <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/roboto_bold</item>
         <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <!-- Style of the Buttons displaying the Fouls -->
+    <style name="ButtonFoulsStyle">
+        <item name="android:layout_width">@dimen/empty</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:text">@string/fouls</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginLeft">@dimen/margin_24</item>
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/roboto_bold</item>
+        <item name="android:textSize">@dimen/text_size_fouls</item>
     </style>
 
     <!-- Style of the View displaying the line in the middle -->
     <style name="LineStyle">
         <item name="android:layout_width">@dimen/width_line</item>
         <item name="android:layout_height">match_parent</item>
-        <item name="android:background">@color/colorPrimary</item>
-        <item name="android:layout_marginTop">@dimen/margin_padding_team_name</item>
-        <item name="android:alpha">0.9</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:layout_marginTop">@dimen/margin_padding_16</item>
     </style>
 </resources>
