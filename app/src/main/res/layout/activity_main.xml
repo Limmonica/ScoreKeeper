@@ -28,7 +28,7 @@
 
             <!-- TEAM A SCORES: POINTS AND FOULS -->
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="@dimen/empty"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical">
@@ -42,10 +42,10 @@
                 <TextView
                     android:id="@+id/team_a_score"
                     style="@style/TextTeamScore"
-                    android:layout_marginLeft="@dimen/margin_padding_16"
-                    android:layout_marginStart="@dimen/margin_padding_16"
-                    android:layout_marginRight="@dimen/width_line"
                     android:layout_marginEnd="@dimen/width_line"
+                    android:layout_marginLeft="@dimen/margin_padding_16"
+                    android:layout_marginRight="@dimen/width_line"
+                    android:layout_marginStart="@dimen/margin_padding_16"
                     android:text="@string/initial_Score"/>
 
                 <!-- Add 3 points for the Team A -->
@@ -91,7 +91,7 @@
 
             <!-- TEAM B SCORE -->
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="@dimen/empty"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical">
@@ -104,11 +104,11 @@
                 <!-- Team B Score View -->
                 <TextView
                     android:id="@+id/team_b_score"
+                    style="@style/TextTeamScore"
                     android:layout_marginEnd="@dimen/margin_padding_16"
+                    android:layout_marginLeft="@dimen/width_line"
                     android:layout_marginRight="@dimen/margin_padding_16"
                     android:layout_marginStart="@dimen/width_line"
-                    android:layout_marginLeft="@dimen/width_line"
-                    style="@style/TextTeamScore"
                     android:text="@string/initial_Score" />
 
                 <!-- Add 3 points for the Team B -->
