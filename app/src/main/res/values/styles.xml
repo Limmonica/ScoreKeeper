@@ -1,21 +1,27 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">#673ab7</item>
         <item name="colorPrimaryDark">#3f51b5</item>
         <item name="colorAccent">#ff9800</item>
         <item name="android:textColor">#ffffff</item>
-        <item name="colorButtonNormal">#673ab7</item>
+        <item name="colorButtonNormal">#3f51b5</item>
+        <item name="cardViewStyle">@style/CardView</item>
+    </style>
+
+    <!-- Team Scores Card Style -->
+    <style name="TeamScoresCardStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/score_card_margin</item>
     </style>
 
     <!-- Style of the TextViews displaying the Team Name -->
     <style name="TextTeamName">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginBottom">@dimen/margin_padding_16</item>
         <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/roboto_bold</item>
         <item name="android:gravity">center</item>
-        <item name="android:padding">@dimen/margin_padding_16</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:textSize">@dimen/text_size_team_name</item>
     </style>
@@ -24,57 +30,43 @@
     <style name="TextTeamScore">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginBottom">@dimen/margin_24</item>
-        <item name="android:background">@color/colorPrimaryDark</item>
         <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/roboto</item>
         <item name="android:gravity">center</item>
         <item name="android:textSize">@dimen/text_size_score</item>
     </style>
 
-    <!-- Style of the TextViews displaying the Team Fouls -->
+    <!-- Style of the TextViews displaying the Teams Fouls -->
     <style name="TextTeamFouls">
-        <item name="android:layout_width">@dimen/empty</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_weight">1</item>
-        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:layout_marginLeft">@dimen/margin_button_points</item>
+        <item name="android:layout_marginRight">@dimen/margin_button_points</item>
+        <item name="android:background">@color/colorPrimary</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:gravity">center</item>
-        <item name="android:paddingTop">@dimen/margin_8</item>
-        <item name="android:paddingBottom">@dimen/margin_8</item>
-        <item name="android:layout_marginRight">@dimen/margin_24</item>
         <item name="android:textSize">@dimen/text_size_fouls_score</item>
         <item name="android:text">@string/initial_Score</item>
     </style>
 
-    <!-- Style of the Buttons displaying the Points and Reset -->
+    <!-- Style of the Buttons displaying Teams Points and Reset -->
     <style name="ButtonStyle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginLeft">@dimen/margin_24</item>
-        <item name="android:layout_marginRight">@dimen/margin_24</item>
-        <item name="android:layout_marginBottom">@dimen/margin_8</item>
+        <item name="android:padding">@dimen/padding_button_points</item>
+        <item name="android:layout_marginLeft">@dimen/margin_button_points</item>
+        <item name="android:layout_marginRight">@dimen/margin_button_points</item>
+        <item name="android:layout_marginBottom">@dimen/margin_bottom_button</item>
         <item name="android:textSize">@dimen/text_size_points</item>
         <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/roboto_bold</item>
         <item name="android:textColor">#ffffff</item>
     </style>
 
-    <!-- Style of the Buttons displaying the Fouls -->
-    <style name="ButtonFoulsStyle">
-        <item name="android:layout_width">@dimen/empty</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_weight">1</item>
-        <item name="android:text">@string/fouls</item>
-        <item name="android:layout_gravity">center</item>
-        <item name="android:layout_marginLeft">@dimen/margin_24</item>
-        <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/roboto_bold</item>
-        <item name="android:textSize">@dimen/text_size_fouls</item>
-    </style>
+    <!-- Style of the Buttons displaying the Teams Fouls -->
 
-    <!-- Style of the View displaying the line in the middle -->
+    <!-- Style of the View displaying the separating line in the middle -->
     <style name="LineStyle">
         <item name="android:layout_width">@dimen/width_line</item>
         <item name="android:layout_height">match_parent</item>
-        <item name="android:background">@color/colorPrimaryDark</item>
-        <item name="android:layout_marginTop">@dimen/margin_padding_16</item>
+        <item name="android:background">@color/textColor</item>
     </style>
 </resources>

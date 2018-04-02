@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="margin_padding_16">16dp</dimen>
-    <dimen name="margin_24">24dp</dimen>
-    <dimen name="margin_8">8dp</dimen>
+    <dimen name="score_card_margin">16dp</dimen>
+    <dimen name="score_card_radius">12dp</dimen>
+    <dimen name="score_card_elevation">8dp</dimen>
+    <dimen name="score_card_max_elevation">16dp</dimen>
+    <dimen name="content_padding">16dp</dimen>
+    <dimen name="padding_button_points">16dp</dimen>
+    <dimen name="margin_button_points">24dp</dimen>
+    <dimen name="margin_bottom_button">8dp</dimen>
     <dimen name="width_line">2dp</dimen>
     <dimen name="empty">0dp</dimen>
-    <dimen name="text_size_team_name">24sp</dimen>
-    <dimen name="text_size_score">56sp</dimen>
+    <dimen name="text_size_team_name">30sp</dimen>
+    <dimen name="text_size_score">70sp</dimen>
     <dimen name="text_size_points">18sp</dimen>
-    <dimen name="text_size_fouls">12sp</dimen>
-    <dimen name="text_size_fouls_score">30sp</dimen>
+    <dimen name="text_size_fouls_score">40sp</dimen>
 </resources>

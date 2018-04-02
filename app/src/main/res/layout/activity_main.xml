@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    tools:context="com.example.android.scorekeeper.MainActivity">
+    android:orientation="vertical"
+    tools:context="MainActivity">
 
+    <!-- SUB-PARENT LAYOUT-->
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <!-- Background image -->
         <ImageView
@@ -16,37 +20,83 @@
             android:layout_height="match_parent"
             android:adjustViewBounds="true"
             android:contentDescription="@string/img_description"
-            android:scaleType="centerCrop"
+            android:scaleType="fitCenter"
             android:src="@drawable/basketball" />
 
-        <!-- TEAMS SCORES -->
+        <!-- Teams Scores Card -->
+        <android.support.v7.widget.CardView
+            android:id="@+id/teams_score_card"
+            style="@style/TeamScoresCardStyle"
+            card_view:cardBackgroundColor="@color/colorPrimary"
+            card_view:cardCornerRadius="@dimen/score_card_radius"
+            card_view:cardElevation="@dimen/score_card_elevation"
+            card_view:cardMaxElevation="@dimen/score_card_max_elevation"
+            card_view:contentPadding="@dimen/content_padding">
+
+            <!-- Teams Score Board Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Team A Score Board -->
+                <LinearLayout
+                    android:layout_width="@dimen/empty"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <!-- Team A Name -->
+                    <TextView
+                        style="@style/TextTeamName"
+                        android:text="@string/team_A_name" />
+
+                    <!-- Team A Score View -->
+                    <TextView
+                        android:id="@+id/team_a_score"
+                        style="@style/TextTeamScore"
+                        android:text="@string/initial_Score" />
+                </LinearLayout>
+
+                <!-- Separator line -->
+                <View style="@style/LineStyle" />
+
+                <!-- Team B Score Board -->
+                <LinearLayout
+                    android:layout_width="@dimen/empty"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <!-- Team B Name -->
+                    <TextView
+                        style="@style/TextTeamName"
+                        android:text="@string/team_B_name" />
+
+                    <!-- Team B Score View -->
+                    <TextView
+                        android:id="@+id/team_b_score"
+                        style="@style/TextTeamScore"
+                        android:text="@string/initial_Score" />
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <!-- ADDING POINTS -->
         <LinearLayout
-            android:id="@+id/teams_scores"
+            android:id="@+id/teams_points"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/teams_score_card"
             android:orientation="horizontal">
 
-            <!-- TEAM A SCORES: POINTS AND FOULS -->
+            <!-- Team A Points -->
             <LinearLayout
                 android:layout_width="@dimen/empty"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical">
-
-                <!-- Team A Name -->
-                <TextView
-                    style="@style/TextTeamName"
-                    android:text="@string/team_A_name" />
-
-                <!-- Team A Score View -->
-                <TextView
-                    android:id="@+id/team_a_score"
-                    style="@style/TextTeamScore"
-                    android:layout_marginEnd="@dimen/width_line"
-                    android:layout_marginLeft="@dimen/margin_padding_16"
-                    android:layout_marginRight="@dimen/width_line"
-                    android:layout_marginStart="@dimen/margin_padding_16"
-                    android:text="@string/initial_Score"/>
 
                 <!-- Add 3 points for the Team A -->
                 <Button
@@ -66,50 +116,38 @@
                     android:onClick="addOneForTeamA"
                     android:text="@string/one_point" />
 
-                <!-- TEAM A FOULS SCORE -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                <!-- Add Foul Button for the Team A -->
+                <Button
+                    style="@style/ButtonStyle"
+                    android:onClick="addFoulsForTeamA"
+                    android:text="@string/fouls" />
 
-                    <!-- Add 1 foul for the Team A -->
-                    <Button
-                        style="@style/ButtonFoulsStyle"
-                        android:onClick="addFoulsForTeamA" />
+                <!-- Foul Counter for the Team A -->
+                <android.support.v7.widget.CardView
+                    style="@style/TeamScoresCardStyle"
+                    card_view:cardBackgroundColor="@color/colorPrimary"
+                    card_view:cardCornerRadius="@dimen/score_card_radius"
+                    card_view:cardElevation="@dimen/score_card_elevation"
+                    card_view:cardMaxElevation="@dimen/score_card_max_elevation"
+                    card_view:contentPadding="@dimen/content_padding">
 
-                    <!-- Text view Fouls for the Team A -->
+                    <!-- Fouls of the Team A -->
                     <TextView
                         android:id="@+id/fouls_score_team_a"
                         style="@style/TextTeamFouls" />
-
-                </LinearLayout>
+                </android.support.v7.widget.CardView>
 
             </LinearLayout>
 
-            <!-- Middle line -->
+            <!-- Separator line -->
             <View style="@style/LineStyle" />
 
-            <!-- TEAM B SCORE -->
+            <!-- Team B Points -->
             <LinearLayout
                 android:layout_width="@dimen/empty"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical">
-
-                <!-- Team B Name -->
-                <TextView
-                    style="@style/TextTeamName"
-                    android:text="@string/team_B_name" />
-
-                <!-- Team B Score View -->
-                <TextView
-                    android:id="@+id/team_b_score"
-                    style="@style/TextTeamScore"
-                    android:layout_marginEnd="@dimen/margin_padding_16"
-                    android:layout_marginLeft="@dimen/width_line"
-                    android:layout_marginRight="@dimen/margin_padding_16"
-                    android:layout_marginStart="@dimen/width_line"
-                    android:text="@string/initial_Score" />
 
                 <!-- Add 3 points for the Team B -->
                 <Button
@@ -129,33 +167,34 @@
                     android:onClick="addOneForTeamB"
                     android:text="@string/one_point" />
 
-                <!-- TEAM B FOULS SCORE -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                <!-- Add Foul Button for the Team B -->
+                <Button
+                    style="@style/ButtonStyle"
+                    android:onClick="addFoulsForTeamB"
+                    android:text="@string/fouls" />
 
-                    <!-- Add 1 foul for the Team B -->
-                    <Button
-                        style="@style/ButtonFoulsStyle"
-                        android:onClick="addFoulsForTeamB" />
+                <!-- Foul Counter for the Team B -->
+                <android.support.v7.widget.CardView
+                    style="@style/TeamScoresCardStyle"
+                    card_view:cardBackgroundColor="@color/colorPrimary"
+                    card_view:cardCornerRadius="@dimen/score_card_radius"
+                    card_view:cardElevation="@dimen/score_card_elevation"
+                    card_view:cardMaxElevation="@dimen/score_card_max_elevation"
+                    card_view:contentPadding="@dimen/content_padding">
 
                     <!-- Text view Fouls for the Team B -->
                     <TextView
                         android:id="@+id/fouls_score_team_b"
                         style="@style/TextTeamFouls" />
-
-                </LinearLayout>
-
+                </android.support.v7.widget.CardView>
             </LinearLayout>
-
         </LinearLayout>
 
         <!-- Reset Button -->
         <Button
             style="@style/ButtonStyle"
-            android:layout_below="@+id/teams_scores"
-            android:layout_marginTop="@dimen/margin_8"
+            android:layout_below="@id/teams_points"
+            android:layout_marginTop="@dimen/margin_bottom_button"
             android:onClick="resetScore"
             android:text="@string/reset_score" />
 
