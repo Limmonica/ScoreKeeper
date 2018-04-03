@@ -8,14 +8,12 @@
         <item name="colorButtonNormal">#3f51b5</item>
         <item name="cardViewStyle">@style/CardView</item>
     </style>
-
     <!-- Team Scores Card Style -->
     <style name="TeamScoresCardStyle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_margin">@dimen/score_card_margin</item>
     </style>
-
     <!-- Style of the TextViews displaying the Team Name -->
     <style name="TextTeamName">
         <item name="android:layout_width">match_parent</item>
@@ -25,7 +23,6 @@
         <item name="android:textAllCaps">true</item>
         <item name="android:textSize">@dimen/text_size_team_name</item>
     </style>
-
     <!-- Style of the TextViews displaying the Team Score -->
     <style name="TextTeamScore">
         <item name="android:layout_width">match_parent</item>
@@ -34,7 +31,6 @@
         <item name="android:gravity">center</item>
         <item name="android:textSize">@dimen/text_size_score</item>
     </style>
-
     <!-- Style of the TextViews displaying the Teams Fouls -->
     <style name="TextTeamFouls">
         <item name="android:layout_width">match_parent</item>
@@ -47,7 +43,6 @@
         <item name="android:textSize">@dimen/text_size_fouls_score</item>
         <item name="android:text">@string/initial_Score</item>
     </style>
-
     <!-- Style of the Buttons displaying Teams Points and Reset -->
     <style name="ButtonStyle">
         <item name="android:layout_width">match_parent</item>
@@ -60,9 +55,6 @@
         <item name="android:fontFamily" tools:targetApi="jelly_bean">@font/roboto_bold</item>
         <item name="android:textColor">#ffffff</item>
     </style>
-
-    <!-- Style of the Buttons displaying the Teams Fouls -->
-
     <!-- Style of the View displaying the separating line in the middle -->
     <style name="LineStyle">
         <item name="android:layout_width">@dimen/width_line</item>

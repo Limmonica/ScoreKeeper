@@ -18,9 +18,8 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:adjustViewBounds="true"
-            android:contentDescription="@string/img_description"
-            android:scaleType="fitCenter"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
             android:src="@drawable/basketball" />
 
         <!-- Teams Scores Card -->
@@ -197,6 +196,5 @@
             android:layout_marginTop="@dimen/margin_bottom_button"
             android:onClick="resetScore"
             android:text="@string/reset_score" />
-
     </RelativeLayout>
 </ScrollView>

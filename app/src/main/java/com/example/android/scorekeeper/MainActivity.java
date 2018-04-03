@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
+
 public class MainActivity extends AppCompatActivity {
 
     // Saves the scores of both teams in case of changing activity
@@ -32,24 +33,36 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
         // Save the user's current game state
+        // Save the score for the team A
         savedInstanceState.putInt(STATE_SCORE_A, scoreTeamA);
+        // Save the score for the team B
         savedInstanceState.putInt(STATE_SCORE_B, scoreTeamB);
+        // Save the fouls for the team A
         savedInstanceState.putInt(STATE_FOULS_A, foulsTeamA);
+        // Save the fouls for the team B
         savedInstanceState.putInt(STATE_FOULS_B, foulsTeamB);
         super.onSaveInstanceState(savedInstanceState);
     }
 
     public void onRestoreInstanceState(Bundle savedInstanceState) {
-        // Always call the superclass so it can restore the view hierarchy
+        // Call the superclass to restore the view hierarchy
         super.onRestoreInstanceState(savedInstanceState);
         // Restore state members from saved instance
+        // Restore the score of the team A
         scoreTeamA = savedInstanceState.getInt(STATE_SCORE_A);
+        // Restore the score of the team B
         scoreTeamB = savedInstanceState.getInt(STATE_SCORE_B);
+        // Restore the fouls for the team A
         foulsTeamA = savedInstanceState.getInt(STATE_FOULS_A);
+        // Restore the fouls for the team B
         foulsTeamB = savedInstanceState.getInt(STATE_FOULS_B);
+        // Display the score for team A
         displayForTeamA(scoreTeamA);
+        // Display the score for team B
         displayForTeamB(scoreTeamB);
+        // Display the fouls for team A
         displayFoulsTeamA(foulsTeamA);
+        // Display the fouls for team B
         displayFoulsTeamB(foulsTeamB);
     }
 
@@ -71,70 +84,58 @@ public class MainActivity extends AppCompatActivity {
     public void displayForTeamA(int score) {
         teamAScoreView.setText(String.valueOf(score));
     }
-
     // Displays the given score for Team B.
     public void displayForTeamB(int score) {
         teamBScoreView.setText(String.valueOf(score));
     }
-
     // Displays the given fouls for Team A.
     public void displayFoulsTeamA(int fouls) {
         teamAFoulsView.setText(String.valueOf(fouls));
     }
-
     // Displays the given fouls for Team B.
     public void displayFoulsTeamB(int fouls) {
         teamBFoulsView.setText(String.valueOf(fouls));
     }
-
     // This method is called when the +3 Points/TeamA button is clicked.
     public void addThreeForTeamA(View view) {
         scoreTeamA += 3;
         displayForTeamA(scoreTeamA);
     }
-
     // This method is called when the +3 Points/TeamB button is clicked.
     public void addThreeForTeamB(View view) {
         scoreTeamB += 3;
         displayForTeamB(scoreTeamB);
     }
-
     // This method is called when the +2 Points/TeamA button is clicked.
     public void addTwoForTeamA(View view) {
         scoreTeamA += 2;
         displayForTeamA(scoreTeamA);
     }
-
     // This method is called when the +2 Points/TeamB button is clicked.
     public void addTwoForTeamB(View view) {
         scoreTeamB += 2;
         displayForTeamB(scoreTeamB);
     }
-
     // This method is called when the Free Throw/Team A button is clicked.
     public void addOneForTeamA(View view) {
         scoreTeamA += 1;
         displayForTeamA(scoreTeamA);
     }
-
     // This method is called when the Free Throw/Team B button is clicked.
     public void addOneForTeamB(View view) {
         scoreTeamB += 1;
         displayForTeamB(scoreTeamB);
     }
-
     // This method is called when the Fouls/Team A button is clicked.
     public void addFoulsForTeamA(View view) {
         foulsTeamA += 1;
         displayFoulsTeamA(foulsTeamA);
     }
-
     // This method is called when the Fouls/Team B button is clicked.
     public void addFoulsForTeamB(View view) {
         foulsTeamB += 1;
         displayFoulsTeamB(foulsTeamB);
     }
-
     // This method is called when the Reset button is clicked.
     public void resetScore(View view) {
         scoreTeamA = 0;
@@ -146,5 +147,4 @@ public class MainActivity extends AppCompatActivity {
         displayFoulsTeamA(foulsTeamA);
         displayFoulsTeamB(foulsTeamB);
     }
-
 }
