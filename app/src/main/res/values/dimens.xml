@@ -9,7 +9,6 @@
     <dimen name="margin_button_points">24dp</dimen>
     <dimen name="margin_bottom_button">8dp</dimen>
     <dimen name="width_line">2dp</dimen>
-    <dimen name="empty">0dp</dimen>
     <dimen name="text_size_team_name">30sp</dimen>
     <dimen name="text_size_score">70sp</dimen>
     <dimen name="text_size_points">18sp</dimen>
