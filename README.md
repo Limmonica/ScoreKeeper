@@ -1,5 +1,5 @@
 
-# Udacity Project no. 3: User Input
+# User Input
 
 # Score Keeper App
 
